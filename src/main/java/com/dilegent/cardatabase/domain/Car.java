@@ -18,7 +18,7 @@ public class Car {
     public Car() {
     }
     public Car(String brand, String model, String color,
-		String registrationNumber, int modelYear, int price) {
+		String registrationNumber, int modelYear, int price, Owner owner) {
         super();
         this.brand = brand;
         this.model = model;
@@ -26,6 +26,7 @@ public class Car {
         this.registrationNumber = registrationNumber;
         this.modelYear = modelYear;
         this.price = price;
+        this.owner = owner;
     }
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="owner")
